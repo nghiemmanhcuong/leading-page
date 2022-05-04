@@ -1,0 +1,49 @@
+.utilitie {
+    padding: var(--section-spacing) 0px;
+
+    &-about {
+        margin-top: var(--section-spacing);
+        background-color:$blue-light;
+    }
+
+    &-feature {
+        background-color: $blue-light;
+
+        &-second {
+            background-color: $yelow-opacity;
+            margin-bottom: var(--section-spacing);
+        }
+    }
+
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        & ~ .utilitie-block {
+            margin-top: 96px;
+        }
+
+        &:last-child {
+            flex-direction: row-reverse;
+
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 623px;
+    }
+
+    &-heading {
+        margin: 16px 0;
+    }
+}

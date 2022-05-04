@@ -1,0 +1,10 @@
+section.portfolio
+  .portfolio-content 
+    span.global-title.portfolio-title What we created
+    h2.global-heading.global-heading--medium.portfolio-heading Our Work Portfolio
+    p.global-desc.portfolio-desc We help teams create great digital products by providing them with tools and technology to make the design-to-code process universally accessible.
+    .portfolio-icons
+      - var icons = ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-linkedin']
+        each icon in icons
+          a.portfolio-icon(href='#!') 
+            i(class= icon)

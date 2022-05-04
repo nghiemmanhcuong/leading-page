@@ -1,0 +1,24 @@
+.who {
+    margin-top: var(--section-spacing);
+
+    &-content {
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 80px 79px;
+        background-color:#F4F5F5;
+        gap: 60px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            padding: 32px;
+        }
+    }
+
+    &-heading {
+        margin: 4px 0 16px;
+    }
+}

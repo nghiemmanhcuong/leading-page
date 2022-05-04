@@ -1,0 +1,45 @@
+.process {
+    margin-top: var(--section-spacing);
+
+    &-heading {
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 64px 32px;
+
+        @include desktop {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-line {
+        display:flex;
+        align-items: center;
+        gap: 0 24px;
+        margin-bottom: 32px;
+    }
+
+    &-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 100rem;
+        background-color: $blue-primary;
+    }
+
+    &-indicator {
+        border-top: 2px dashed $blue-primary;
+        flex: 1;
+    }
+
+    &-title {
+        margin-bottom: 8px;
+    }
+}

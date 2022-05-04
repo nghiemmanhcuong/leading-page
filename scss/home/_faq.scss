@@ -1,0 +1,107 @@
+.faq {
+    margin-bottom: var(--section-spacing);
+
+    &-container {
+        display:flex;
+        justify-content:space-between;
+        gap: 60px 109px;
+        height: max-content;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &-left {
+        width: 100%;
+        max-width: 328px;
+
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+
+    &-heading {
+        margin-bottom: 16px;
+        text-align: left;
+
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    &-view {
+        color: $blue-primary;
+
+        @include tablet {
+            justify-content:center;
+        }
+    }
+}
+
+.accordion {
+
+    &-item {
+        display: flex;
+        gap: 0 53px;
+        color: $blue-dark;
+        padding-bottom: 32px;
+
+        & ~ .accordion-item {
+            border-top: 2px solid #ECECF1;
+            padding-top: 32px;
+        }
+
+        @include mobile {
+            gap: 0 20px;
+        }
+    }
+
+    &-number {
+        font-size: 24px;
+        line-height:36px;
+        color: $blue-primary;
+    }
+
+    &-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+        cursor: pointer;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &-body {
+        max-width: 624px;
+        font-size: 18px;
+        line-height: 32px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        height: 0;
+
+        &.slideDown {
+            padding: 16px 0 25px;
+            height: max-content;
+        }
+    }
+
+    &-toggle {
+
+        .fa-times {
+            transition: all 0.5s ease;
+            transform: rotate(180deg);
+        } 
+
+        .fa-plus {
+            transition: all 0.5s ease;
+            transform: rotate(0);
+        } 
+    }
+}

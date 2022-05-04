@@ -1,0 +1,25 @@
+.portfolio {
+    padding: 96px 0;
+    background-color: $gray-light;
+    margin-bottom: var(--section-spacing);
+
+    &-content {
+        max-width: 733px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &-heading {
+        margin: 4px 0 24px;
+    }
+
+    &-icons {
+        margin-top: 32px;
+    }
+
+    &-icon {
+        display: inline-block;
+        margin-left: 28px;
+    }
+}

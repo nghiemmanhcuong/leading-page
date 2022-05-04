@@ -1,0 +1,33 @@
+footer.footer
+	.footer-top
+		.wrapper 
+			.footer-container 
+				.footer-left 
+					.footer-logo 
+						img(src='../../image/logo.png')
+					p.global-desc.footer-commit We are always open to discuss your project and improve your online presence.
+					.footer-contact 
+						.footer-contact-item
+							span.footer-contact-title Email me at
+							span.footer-contact-text contact@website.com
+						.footer-contact-item
+							span.footer-contact-title Call us
+							span.footer-contact-text 0927 6277 28525
+				.footer-right 
+					h2.global-heading.global-heading--medium.footer-heading Lets Talk!
+					p.global-desc.footer-desc We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.
+					.footer-icons
+						- var icons = ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-linkedin']
+							each icon in icons
+								a(href='#!')
+									i(class= icon)
+	.footer-bottom 
+		.wrapper
+			.footer-bottom-wrapper
+				span Copyright 2022, Finsweet.com
+				nav.footer-navigation
+					ul.footer-list
+						- var list = ['Home','About us','Features','Pricing','FAQ','Blog']
+							each item in list
+								li.footer-item 
+									a.footer-link(href='#!')= item

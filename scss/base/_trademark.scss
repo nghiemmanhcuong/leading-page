@@ -1,0 +1,39 @@
+.trademark {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px 89px;
+
+    @include desktop {
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    &-feature {
+        margin: 96px 0;
+    }
+
+    &-count {
+        max-width: 176px;
+    
+        span {
+            display: block;
+            font-size: 38px;
+            line-height: 56px;
+        }
+    }
+    
+    &-logos {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap:60px;
+
+        @include tablet {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}

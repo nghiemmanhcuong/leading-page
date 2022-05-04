@@ -1,0 +1,30 @@
+.blog-detail {
+    margin: var(--section-spacing) 0px;
+
+    &-header {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &-heading {
+        margin:40px 0 32px;
+    }
+
+    &-list {
+        margin: 24px 0;
+        list-style: unset;
+        padding-left: 18px;
+    }
+
+    &-item ~ &-item {
+        margin-top: 16px;
+    }
+
+    &-image {
+        margin-top: 32px;
+
+        img {
+            min-width: 100%;
+        }
+    }
+}

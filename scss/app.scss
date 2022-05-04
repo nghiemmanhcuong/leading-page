@@ -1,0 +1,36 @@
+@import './base/variables';
+@import './base/resset';
+@import './base/breakpoint';
+@import './base/global';
+@import './base/header';
+@import './base/footer';
+@import './base/trademark';
+@import './base/benefit';
+@import './base/utilitie';
+/*home*/
+@import './home/job';
+@import './home/project';
+@import './home/feature-home';
+@import './home/testimonial';
+@import './home/faq';
+@import './home/home-contact';
+@import './home/home-blog';
+/*about*/
+@import './about/problems';
+@import './about/who';
+@import './about/process';
+@import './about/team';
+/*pricing*/
+@import './pricing/package';
+/*work*/
+@import './work/portfolio';
+@import './work/template';
+@import './work/together';
+/*blog*/
+@import './blog/student';
+@import './blog/our-blog';
+/*contact*/
+@import './contact/contact';
+/*detail*/
+@import './detail/template-detail';
+@import './detail/blog-detail';

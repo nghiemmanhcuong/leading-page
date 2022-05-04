@@ -1,0 +1,30 @@
+.student {
+    margin-top: var(--section-spacing);
+    text-align: center;
+
+    &-desc,
+    &-heading {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+
+    &-heading {
+        max-width: 950px;
+    }
+
+    &-image {
+        margin: 32px 0 48px;
+    }
+
+    &-desc {
+        max-width: 830px;
+    }
+
+    &-view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blue-primary;
+    }
+}

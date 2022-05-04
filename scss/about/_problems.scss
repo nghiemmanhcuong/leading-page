@@ -1,0 +1,42 @@
+.problems {
+    margin-top: var(--section-spacing);
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px 138px;
+
+        @include desktop {
+            flex-direction: column;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 595px;
+        text-align: left;
+
+        @include desktop {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &-heading {
+        margin: 8px 0 31px;
+    }
+
+    &-desc {
+        @include desktop {
+            max-width: 595px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-image > img {
+        @include desktop {
+            min-width: 100%;
+        }
+    }
+}

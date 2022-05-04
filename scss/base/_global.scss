@@ -1,0 +1,158 @@
+.wrapper {
+    max-width: 1300px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+        padding: 0 30px;
+    }
+}
+
+.button {
+    border: none;
+    outline: none;
+    border-radius:40px;
+    font-size: 18px;
+    padding: 12px 32px;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+
+    @include mobile {
+        padding: 8px 18px;
+        font-size: 16px;
+    }
+
+    &-yelow {
+        &--primary {
+            color: #1B1C2A;
+            background-color: $yelow-primary;
+        }
+
+        &--light {
+            color: #1B1C2A;
+            background-color: $yelow-light;
+        }
+    }
+
+    &-gray {
+        &--primary {
+            color: #FFFFFF;
+            background-color: #282938;
+        }
+
+        &--light {
+            color: #FFFFFF;
+            background-color: #535460;
+        }
+    }
+
+    &-outline {
+        border: 2px solid rgba(244, 246, 252, 0.2);
+        background-color:transparent;
+        color: #FFFFFF;
+    }
+}
+
+.global {
+
+    &-title {
+        font-size: 18px;
+        line-height:32px;
+        font-weight: 500;
+        color: $blue-dark;
+    }
+
+    &-heading {
+        font-weight: 600;
+        color: $blue-dark;
+
+        &--big {
+            font-size: 54px;
+            line-height:74px;
+
+            @include desktop {
+                font-size: 42px;
+                line-height:58px;
+            }
+
+            @include desktop {
+                font-size: 37px;
+                line-height: 48px;
+            }
+        }
+
+        &--medium {
+            font-size: 48px;
+            line-height: 64px;
+
+            @include desktop {
+                font-size: 36px;
+                line-height: 52px;
+            }
+
+            @include desktop {
+                font-size: 31px;
+                line-height: 42px;
+            }
+        }
+
+        &--small {
+            font-size: 38px;
+            line-height: 56px;
+
+            @include desktop {
+                font-size: 26px;
+                line-height: 42px;
+            }
+
+            @include desktop {
+                font-size: 21px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    &-desc {
+        font-size: 16px;
+        font-weight: 400;
+        color: $blue-dark;
+        opacity: 0.7;
+        line-height: 28px;
+    }
+
+    &-view {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 10px;
+            transition: all 0.3s linear;
+        }
+
+        &:hover span {
+            margin-right: 16px;
+        }
+    }
+}
+
+.to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 32px;
+    cursor: pointer;
+    color: $blue-primary;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &.show {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

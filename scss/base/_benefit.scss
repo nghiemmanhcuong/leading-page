@@ -1,0 +1,38 @@
+.benefit {
+    margin-top: var(--section-spacing);
+
+    &-feature {
+        margin-top: 0;
+    }
+
+    &-heading {
+        text-align: center;
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 32px;
+        margin-bottom: 48px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        padding: 50px 45px;
+        background-color: $blue-light;
+    }
+
+    &-title {
+        margin: 26px 0 12px;
+        font-size: 24px;
+        line-height:36px;
+        font-weight: 500;
+    }
+}

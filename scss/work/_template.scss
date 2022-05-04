@@ -1,0 +1,58 @@
+.template {
+    margin-bottom: var(--section-spacing);
+
+    &-tabs {
+
+        &-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        &-item {
+            cursor: pointer;
+            transition: color 0.2s ease;
+            font-size: 18px;
+            line-height:32px;
+            font-weight: 500;
+
+            @include mobile {
+                width: 180px;
+                text-align: center;
+            }
+
+            &:first-child,
+            &:hover {
+                color: $blue-primary;
+            }
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 64px 34px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-content {
+        margin-top: 24px;
+    }
+
+    &-title {
+        margin-bottom: 12px;
+        font-size: 38px;
+        line-height: 56px;
+        font-weight: 600;
+    }
+
+    &-text {
+        margin-bottom: 24px;
+    }
+}

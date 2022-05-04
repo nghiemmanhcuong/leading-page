@@ -1,0 +1,35 @@
+block mixins 
+	include ../../views/base/mixins
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' 
+	rel='stylesheet')
+	link(rel='stylesheet' href='../../css/app.css')
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+	title Document
+body 
+	.app 
+		+header('../../image/feature-hero-image.png','All the features you need','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.','View Pricing',[{display: 'Home',path:'../../index.html'},{display: 'About us',path:'../about/about.html'},{display: 'Features',path:'./feature.html',active:'active'},{display: 'Pricing',path:'../pricing/pricing.html'},{display: 'Work',path:'../work/work.html'},{display: 'Blog',path:'../blog/blog.html'},],'../contact/contact.html')
+		main
+			section.trademark-feature
+				.wrapper 
+					include ../../views/base/trademark
+			include ../../views/feature/feature-benefit
+			section.utilitie-feature.utilitie
+				.wrapper.utilitie-container 	 
+					+utilitieBlock('Use Client-first','Top agencies and freelancers around the world use Client-first','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','../../image/feature-utilitie-1.png')
+					+utilitieBlock('Free Revision Rounds','Get free Revisions and one week of free maintenance','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','../../image/feature-utilitie-2.png')
+			section.utilitie-feature.utilitie-feature-second.utilitie
+				.wrapper.utilitie-container 	 
+					+utilitieBlock('24/7 Support','Working with us, you will be getting 24/7 priority support','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','../../image/feature-utilitie-second-1.png')
+					+utilitieBlock('Quick Delivery','Guranteed 1 week delivery for standard five pager website','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','../../image/feature-utilitie-second-2.png')
+			include ../../views/base/faq
+		+toTop
+		include ../../views/base/footer
+	script 
+		include ../../main.js

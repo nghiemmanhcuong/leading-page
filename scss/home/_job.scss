@@ -1,0 +1,68 @@
+.job {
+    background-color: $gray-light;
+    padding: var(--section-spacing) 0px;
+    margin-bottom: var(--section-spacing);
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px 142px;
+
+        @include desktop {
+            flex-direction: column;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 405px;
+
+        @include desktop {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &-desc {
+        margin: 16px 0px;
+    }
+
+    &-touch {
+        color: $blue-primary;
+
+        @include desktop {
+            width: 100%;
+            justify-content:center;
+        }
+    }
+
+    &-list {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+
+    &-item {
+        width: calc(50% - 48px);
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &-title {
+        margin: 16px 0 8px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 48px;
+    }
+}

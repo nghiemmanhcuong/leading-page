@@ -1,0 +1,15 @@
+.together {
+    margin-bottom: var(--section-spacing);
+
+    &-content {
+        max-width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &-desc {
+        margin: 20px auto 40px;
+        max-width:562px;
+    }
+}

@@ -1,0 +1,161 @@
+mixin header(image,heading,desc,buttonText,navigation,contactPath)
+	header.header 
+		.wrapper
+			+navigation(navigation,contactPath)
+			.home-hero 
+				.home-hero-content 
+					h2.global-heading.global-heading--big.home-hero-heading= heading
+					p.global-desc.home-hero-desc= desc
+					.home-hero-view
+						if buttonText === 'View our work' 
+							a.button.button-yelow--light.home-hero-button(href= navigation[4].path)= buttonText
+						else
+							a.button.button-yelow--light.home-hero-button(href= navigation[3].path)= buttonText
+						a.global-view.home-hero-pricing(href= navigation[3].path)
+							span View Pricing
+							img(src='../../image/arrow-right.svg')
+				.home-hero-image 
+					img(src= image)
+
+mixin navigation(props,contactPath)
+	.navigation
+		.wrapper.navigation-container
+			.navigation-bar(id='header-show')
+				i.fas.fa-bars
+			a.logo(href= props[0].path)
+				img.logo-image(src='../../image/logo.png')
+			nav.menu
+				ul.menu-list 
+					each item in props
+						li.menu-item
+							a.menu-link(href= item.path, class= item.active)= item.display
+			.contact-us
+				a.contact-us-icon(href= contactPath)
+					i.fas.fa-envelope 
+				a.button.button-outline(href= contactPath) Contact us
+
+mixin jobItem(image,title,text)
+	article.job-item 
+		.job-number 
+			img(src= image)
+		h3.job-title= title
+		p.global-desc.job-text= text
+
+mixin featureItem(icon,title,text)
+	article.feature-item 
+		.feature-icon 
+			img(src= icon)
+		.feature-title= title
+		.global-desc.feature-text= text
+
+mixin accordionItem(number,title,text)
+	article.accordion-item
+		span.accordion-number= number
+		.accordion-container 
+			.accordion-header 
+				span= title
+				span.accordion-toggle
+					i.fas.fa-plus
+			.accordion-body= text
+
+mixin blogItem(image,date,title,text)
+	article.blog-item 
+		a.blog-image(href='../../pages/blog-detail/blog-detail.html')
+			img(src= image)
+		.blog-content
+			span.global-desc.blog-date= date
+			a(href='../../pages/blog-detail/blog-detail.html')
+				h4.blog-title= title
+			p.global-desc.blog-text= text
+			a.global-view.blog-more(href='../../pages/blog-detail/blog-detail.html')
+				span Read More
+				img(src='../../image/arrow-right-black.svg')
+
+mixin processItem(title,text)
+	.process-item 
+		.process-line 
+			.process-circle 
+			.process-indicator 
+		.process-content 
+			h3.process-title= title
+			p.global-desc.process-text= text
+
+mixin utilitieBlock(title,heading,text,image)
+	article.utilitie-block 
+		.utilitie-content 
+			span.global-title.utilitie-title= title
+			h2.global-heading.global-heading--small.utilitie-heading= heading
+			p.global-desc.utilitie-text= text
+		.utilitie-image 
+			img(src= image)
+
+mixin benefitItem(icon,title,text)
+	article.benefit-item 
+		.benefit-icon 
+			img(src= icon)
+		.benefit-content 
+			h3.benefit-title= title
+			p.global-desc.benefit-text= text
+
+mixin teamItem(image,name,jobPosition)
+	article.team-item 
+		.team-image 
+			img(src= image)
+			.team-info 
+				a(href='#!') 
+					img(src='../../image/facebook-icon.svg') 
+				a(href='#!') 
+					img(src='../../image/twitter-icon.svg') 
+				a(href='#!') 
+					img(src='../../image/linkedln-icon.svg') 
+		.team-information
+			a(href='#!') 
+				h3.team-name= name 
+			span.global-desc= jobPosition
+
+mixin packageItem(price,name,title,text,permissions = [],btnText)
+	article.package-item
+		.package-hero 
+			span.package-price= price
+			span.package-name= name
+		.package-content 
+			h4.package-title= title 
+			p.global-desc.package-text= text
+		ul.package-permissions
+			each permission in permissions
+				li.package-permission 
+					img(src='../../image/pricing-icon.svg')
+					span= permission
+		.package-button
+			a.button.button-gray--primary(href='#!')= btnText
+
+mixin templateItem(image,title,text)
+	article.template-item 
+		.template-image
+			a(href='../../pages/template/template-detail.html') 
+				img(src= image)
+		.template-content
+			a(href='../../pages/template/template-detail.html')  
+				h3.template-title= title
+			p.global-desc.template-text= text
+			a.global-view.template-view(href='../../pages/template/template-detail.html')
+				span View Portfolio
+				img(src='../../image/arrow-right-black.svg') 
+
+mixin fromInput(label,placeholder,type)
+	.form-input
+		label= label 
+		input(type= type, placeholder= placeholder)
+
+mixin templateBodyBlock(title,desc,list)
+	.template-body-block 
+		h2.global-heading.global-heading--small.template-body-title= title
+		p.global-desc.template-body-desc= desc
+		ul.template-body-list
+			each item in list
+				li.template-body-item= item
+
+mixin toTop()
+	.to-top(id='to-top')
+		i.fas.fa-arrow-alt-circle-up
+			

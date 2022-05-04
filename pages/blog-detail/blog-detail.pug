@@ -1,0 +1,69 @@
+block mixins 
+	include ../../views/base/mixins
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' 
+	rel='stylesheet')
+	link(rel='stylesheet' href='../../css/app.css')
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+	title Document
+body 
+	.app 
+		+navigation([
+			{
+				display: 'Home',
+				path:'../../index.html'
+			},
+			{
+				display: 'About us',
+				path:'../about/about.html',
+			},
+			{
+				display: 'Features',
+				path:'../feature/feature.html'
+			},
+			{
+				display: 'Pricing',
+				path:'../pricing/pricing.html'
+			},
+			{
+				display: 'Work',
+				path:'../work/work.html'
+			},
+			{
+				display: 'Blog',
+				path:'../blog/blog.html'
+			},
+		],'../contact/contact.html')
+		.blog-detail
+			.wrapper 
+				.blog-detail-header
+					h2.global-heading.global-heading--medium.student-heading A UX Case Study on Creating a Studious Environment for Students
+					span.global-title Andrew Jonson Posted on 27th January 2021
+					.student-image 
+						img(src='../../image/student-image.png')
+					p.global-desc.student-desc Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+				.blog-detail-body
+					h2.global-heading.global-heading--small.blog-detail-heading Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					p.global-desc.blog-detail-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					h2.global-heading.global-heading--small.blog-detail-heading Ut enim ad minim veniam, quis nostrud.
+					p.global-desc.blog-detail-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					ul.blog-detail-list
+						li.blog-detail-item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+						li.blog-detail-item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+						li.blog-detail-item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+					p.global-desc.blog-detail-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.blog-detail-image
+						img(src='../../image/blog-detail-image.png')
+					h2.global-heading.global-heading--small.blog-detail-heading Ut enim ad minim veniam, quis nostrud.
+					p.global-desc.blog-detail-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		+toTop
+		include ../../views/base/footer
+	script 
+		include ../../main.js
+

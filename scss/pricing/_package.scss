@@ -1,0 +1,112 @@
+.package {
+    margin: var(--section-spacing) 0px;
+
+    &-header {
+        text-align: center;
+        margin-bottom: 64px;
+        max-width:562px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-heading {
+        margin-bottom: 16px;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 32px;
+
+        @include desktop {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        background-color:$gray-light;
+        padding: 64px 48px;
+        border-radius: 12px;
+        color: $blue-dark;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color:$blue-tint;
+            color: #FFFFFF;
+
+            .package-text {
+                color: #FFFFFF;
+            }
+
+            .package-name {
+                color: $yelow-primary;
+            }
+
+            .package-button > a {
+                color: $blue-dark;
+                background-color:$yelow-primary;
+            }
+        }
+    }
+
+    &-hero {
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+    }
+
+    &-price {
+        font-size: 38px;
+        line-height: 56px;
+        font-weight: 600;
+    }
+
+    &-name {
+        font-size: 16px;
+        line-height: 28px;
+        color: $blue-primary;
+    }
+
+    &-content {
+        margin: 34px 0 64px;
+    }
+
+    &-title {
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+    }
+
+    &-text {
+        min-height:84px;
+    }
+
+    &-permissions {
+        min-height: 268px;
+    }
+
+    &-permission {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+
+        & ~ .package-permission {
+            margin-top: 20px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

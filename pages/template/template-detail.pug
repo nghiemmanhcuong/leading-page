@@ -1,0 +1,74 @@
+block mixins 
+	include ../../views/base/mixins
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' 
+	rel='stylesheet')
+	link(rel='stylesheet' href='../../css/app.css')
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+	title Document
+body 
+	.app 
+		+navigation([
+			{
+				display: 'Home',
+				path:'../../index.html'
+			},
+			{
+				display: 'About us',
+				path:'../about/about.html',
+			},
+			{
+				display: 'Features',
+				path:'../feature/feature.html'
+			},
+			{
+				display: 'Pricing',
+				path:'../pricing/pricing.html'
+			},
+			{
+				display: 'Work',
+				path:'../work/work.html'
+			},
+			{
+				display: 'Blog',
+				path:'../blog/blog.html'
+			},
+		],'../contact/contact.html')
+		.wrapper 
+			.template-top 
+				span.template-top-title Web design and development
+				h2.global-heading.global-heading--medium.template-top-heading Finsweet Design case studies
+				p.global-desc.template-top-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+				.template-top-image 
+					img(src = '../../image/template-top-image.png')
+				.template-top-information
+					.template-top-information-item 
+						span.template-top-information-title Client
+						h3.template-top-information-text facebook.com
+					.template-top-information-item 
+						span.template-top-information-title Service
+						h3.template-top-information-text Product Design
+					.template-top-information-item 
+						span.template-top-information-title Deliverable
+						h3.template-top-information-text UI Screens, UX Flow &amp; Prototype
+			.template-body 
+				+templateBodyBlock('About the project','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',['Lorem ipsum dolor sit amet, consectetur adipiscing elit','Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea','Duis aute irure dolor in reprehenderit in voluptate velit esse','Excepteur sint occaecat cupidatat non proident, sunt in culpa'])
+				.template-body-image 
+					img(src='../../image/template-body-image.png')
+				+templateBodyBlock('How we do it','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',['Lorem ipsum dolor sit amet, consectetur adipiscing elit','Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea','Duis aute irure dolor in reprehenderit in voluptate velit esse','Excepteur sint occaecat cupidatat non proident, sunt in culpa'])
+			nav.template-keyword
+				ul.template-keyword-list
+					- var list = ['Design ','UI/UX ','Wireframing','Branding','Development','webflow']
+					each item in list 
+						li.template-keyword-item= item
+			include ../../views/base/together
+		+toTop
+		include ../../views/base/footer
+	script 
+		include ../../main.js

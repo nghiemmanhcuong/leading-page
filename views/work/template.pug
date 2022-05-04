@@ -1,0 +1,14 @@
+section.template
+  .wrapper 
+    nav.template-tabs
+      ul.template-tabs-list
+        - var tabs = ['All','UI Design','Webflow Design','Figma Design']
+          each tab in tabs
+            li.template-tabs-item= tab 
+    .template-list 
+      +templateItem('../../image/category-image-1.png','Template 1','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.') 
+      +templateItem('../../image/category-image-2.png','Template 2','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.')
+      +templateItem('../../image/category-image-3.png','Template 3','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.')
+      +templateItem('../../image/category-image-4.png','Template 4','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.')
+      +templateItem('../../image/category-image-5.png','Template 5','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.')
+      +templateItem('../../image/category-image-6.png','Template 6','Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.')

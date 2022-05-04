@@ -1,0 +1,92 @@
+.testimonial {
+    padding: var(--section-spacing) 0px;
+    margin-bottom: var(--section-spacing);
+    background-color:#f8f9fc;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px 110px;
+        position: relative;
+
+        @include desktop {
+            flex-direction:column;
+        }
+    }
+
+    &-left {
+        width: 100%;
+        max-width: 327px;
+
+        @include desktop {
+            max-width: 500px;
+            text-align: center;
+        }
+    }
+
+    &-heading {
+        margin-bottom: 16px;
+    }
+
+    &-content {
+        flex: 1;
+    }
+
+    &-comment {
+        font-size: 32px;
+        line-height: 48px;
+        color: $blue-dark;
+        font-weight: 500;
+        margin-bottom: 48px;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 0 14px;
+    }
+
+    &-name,
+    &-job {
+        color: $blue-dark;
+    }
+
+    &-name {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+
+    &-job {
+        font-size: 12px;
+        line-height: 28px;
+    }
+
+    &-buttons {
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 100rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blue-dark;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color:#5239FA;
+            color:#FFFFFF;
+            opacity: 1;
+        }
+    }
+}

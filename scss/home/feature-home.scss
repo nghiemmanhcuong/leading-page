@@ -1,0 +1,38 @@
+.feature {
+    padding: var(--section-spacing) 0px;
+    background-color:$gray-light;
+
+    &-header {
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 47px;
+        text-align: center;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 24px 32px;
+
+        @include desktop {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        background-color:#FFFFFF;
+        padding: 58px 33px 48px 48px;
+    }
+
+    &-title {
+        margin: 22px 0 12px;
+        font-size: 24px;
+        line-height:36px;
+        font-weight: 500;
+    }
+}
